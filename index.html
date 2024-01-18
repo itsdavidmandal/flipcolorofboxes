@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .cell{
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    
+    <table>
+        <tr>
+            <td class="cell" id="c1"></td>
+            <td class="cell" id="c2"></td>
+            
+        </tr>
+    </table>
+
+    
+    <script>
+        function colors(){
+            var c1 = document.getElementById("c1");
+            var c2 = document.getElementById("c2");
+
+
+            if(c1.style.backgroundColor == "red"){
+                c1.style.backgroundColor = "white" ;
+                c2.style.backgroundColor = "red";
+            }
+
+            else {
+                c1.style.backgroundColor = "red" ;
+                c2.style.backgroundColor = "white";
+            }
+
+            setTimeout(colors , 1000);
+
+        }
+        document.getElementById("c1").style.backgroundColor ="red";
+        colors();
+
+    </script>
+</body>
+</html>
